@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/usr/local/emsdk/upstream/emscripten/cache/sysroot/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
