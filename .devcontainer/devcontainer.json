@@ -1,0 +1,21 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/dotnet-wasi:0": {},
+		// "devwasm.azurecr.io/dev-wasm/dev-wasm-feature/golang-wasi:0": {},
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/rust-wasi:0": {},
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/wasmtime-wasi:0": {},
+		"ghcr.io/ebaskoro/devcontainer-features/emscripten:1": {}
+	},
+	"postCreateCommand": "npm install -g http-server && sudo apt-get update && sudo apt-get install wabt",
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:/usr/local/emsdk/upstream/emscripten"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools"
+			]
+		}
+	}
+}
