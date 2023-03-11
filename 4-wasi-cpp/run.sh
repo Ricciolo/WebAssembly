@@ -1,0 +1,1 @@
+wasmtime --dir . out/wasi.wasm out/result.txt
