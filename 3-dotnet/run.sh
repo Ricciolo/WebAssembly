@@ -1,0 +1,1 @@
+http-server bin/release/net7.0/browser-wasm/AppBundle/

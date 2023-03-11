@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-us">
+<body>
+
+  <button onclick="Module.callJavascript(Math.random())">Show alert</button>
+
+  <script type='text/javascript'>
+
+    let Module = null;
+
+    const imports = {
+      env: {
+        javascriptAlert: (n) => {
+          alert("Alert from WebAssembly: " + n);
+        }
+      }
+    };
+
+    fetch('out/base.wasm')
+      .then(response => response.arrayBuffer())
+      .then(buffer => WebAssembly.instantiate(buffer, imports))
+      .then(source => {
+        Module = source.instance.exports;
+        
+        const result = Module.add(1, 2);
+        console.log(result);
+      });
+
+  </script>
+</body>
+
+</html>

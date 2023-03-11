@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-us">
+
+<body>
+
+  <script type="text/javascript" src="out/complex.js"></script>
+  <script type='text/javascript'>
+    Module.onRuntimeInitialized = _ => {
+      console.log(Module.add(1, 2));
+
+      console.log(Module.addValueObject({ x: 2, y: 3 }));
+
+      var calc = new Module.Calculator();
+      calc.add(4, 5);
+      console.log(calc.lastResult);
+    };
+  </script>
+
+</body>
+
+</html>
