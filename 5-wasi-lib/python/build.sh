@@ -1,0 +1,1 @@
+python -m wasmtime.bindgen ../out/wasi-lib.wasm --out-dir wasilib

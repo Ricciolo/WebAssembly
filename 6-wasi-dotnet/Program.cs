@@ -1,13 +1,4 @@
-﻿string fileName;
-if (args.Length < 1)
-{
-    fileName = "out/hello.txt";
-}
-else
-{
-    fileName = args[0];
-}
-
+﻿string fileName = "/tmp/hello.txt";
 Console.WriteLine("Writing to file {0}", fileName);
 
 string text = "Hello world!";

@@ -1,0 +1,18 @@
+interface logger {
+  print: func(s: string)
+}
+
+interface program {
+  record valueobject {
+    x: u32,
+    y: u32,
+  }
+  add: func(o: valueobject) -> u32
+
+  run: func()
+}
+
+default world wasilib {
+  import logger: self.logger
+  export program: self.program
+}

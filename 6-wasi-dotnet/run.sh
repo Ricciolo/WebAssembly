@@ -1,1 +1,1 @@
-wasmtime --dir . out/wasi-dotnet.wasm
+wasmtime --dir /tmp out/wasi-dotnet.wasm out/hello.txt
