@@ -7,7 +7,7 @@
 		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/wasmtime-wasi:0": {},
 		"ghcr.io/ebaskoro/devcontainer-features/emscripten:1": {}
 	},
-	"postCreateCommand": "npm install -g http-server && sudo apt-get update && sudo apt-get install wabt && sudo dotnet workload install wasm-tools && curl https://get.wasmer.io -sSfL | sh && curl https://raw.githubusercontent.com/wasienv/wasienv/master/install.sh | sh",
+	"postCreateCommand": "post.sh",
 	"remoteEnv": {
 		"PATH": "${containerEnv:PATH}:/usr/local/emsdk/upstream/emscripten"
 	},
